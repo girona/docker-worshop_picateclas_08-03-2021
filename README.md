@@ -4,4 +4,4 @@ Grup de Telegram Picateclas
 
 ### Alguns tips que varem veure:
 
-![Docker Tips](image-tips/.jpg?raw=true)
+![Docker Tips](image-tipstips_2021-03-09.jpg?raw=true)
