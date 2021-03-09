@@ -1,0 +1,28 @@
+version: "2.6"
+
+services:
+  reverse:
+    image: nginx:alpine
+    volumes:
+      - ./nginx_conf:/etc/nginx/conf.d/
+    ports:
+      - "80:80"
+  nodeweb:
+    image: nodeweb:v3
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 2
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 10Mb
+  nodeweb2:
+    image: nodeweb:v3
+    build: .
+    deploy:
+      mode: replicated
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
