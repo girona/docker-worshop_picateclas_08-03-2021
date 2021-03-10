@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web:
-    image: 127.0.0.1:5000/stackdemo
+    image: pyweb
     build: .
     ports:
       - "8000:8000"
